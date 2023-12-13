@@ -5,7 +5,7 @@ import {CurrentUserInterface} from "../../../shared/types/current-user.interface
 import {BackendErrorsInterface} from "../../../shared/types/backend-errors.interface";
 
 export const registerAction =
-  createAction(ActionType.REGISTER, props<{request: RegisterRequestInterface}>()
+  createAction(ActionType.REGISTER, props<{ request: RegisterRequestInterface}>()
   )
 
 export const registerSuccessAction =

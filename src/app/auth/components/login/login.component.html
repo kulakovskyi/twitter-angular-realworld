@@ -1,1 +1,34 @@
-<p>login works!</p>
+<div class="auth-page">
+  <div class="container page">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 col-xs-12"><h1 class="text-xs-center">Sign in</h1>
+        <p class="text-xs-center">
+          <a [routerLink]="['/register']">Need an account?</a>
+        </p>
+        <app-backend-error-message
+          *ngIf="backendErrors$ | async"
+          [backendError]="backendErrors$ | async"
+        ></app-backend-error-message>
+        <form novalidate="" class="ng-untouched ng-pristine ng-invalid" [formGroup]="form" (ngSubmit)="onSubmit()">
+          <fieldset>
+            <fieldset class="form-group">
+              <input
+                formControlName="email"
+                class="form-control form-control-lg ng-untouched ng-pristine ng-invalid"
+                placeholder="Email" type="text">
+            </fieldset>
+            <fieldset class="form-group">
+              <input
+                formControlName="password"
+                class="form-control form-control-lg ng-untouched ng-pristine ng-invalid"
+                placeholder="Password" type="password">
+            </fieldset>
+            <button
+              [disabled]="form.invalid || (isSubmitting$ | async)"
+              class="btn btn-lg btn-primary pull-xs-right" type="submit" > Sign in</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

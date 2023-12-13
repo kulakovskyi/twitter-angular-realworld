@@ -11,6 +11,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {EffectsModule} from "@ngrx/effects";
 import {RegisterEffect} from "./store/effects/register.effect";
 import {PersistanceService} from "../shared/services/persistance.service";
+import {BackendErrorMessageModule} from "../shared/modules/backend-error-messages/backend-error-message.module";
+import {LoginEffect} from "./store/effects/login.effect";
 
 const routes: Routes = [
   {path: 'register', component: RegisterComponent},
@@ -22,15 +24,16 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     StoreModule.forFeature('auth', reducers),
-    EffectsModule.forFeature([RegisterEffect]),
+    EffectsModule.forFeature([RegisterEffect, LoginEffect]),
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BackendErrorMessageModule
   ],
-  declarations: [
-    LoginComponent,
-    RegisterComponent
-  ],
+    declarations: [
+        LoginComponent,
+        RegisterComponent,
+    ],
   providers: [
     AuthService,
     PersistanceService

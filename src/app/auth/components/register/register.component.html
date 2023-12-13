@@ -4,8 +4,12 @@
       <div class="col-md-6 offset-md-3 col-xs-12">
         <h1 class="text-xs-center">Sign up</h1>
         <p class="text-xs-center">
-          <a [routerLink]="['/login']">Have an account?</a></p>
-
+          <a [routerLink]="['/login']">Have an account?</a>
+        </p>
+        <app-backend-error-message
+          *ngIf="backendErrors$ | async"
+          [backendError]="backendErrors$ | async"
+        ></app-backend-error-message>
         <form [formGroup]="form"
               (ngSubmit)="onSubmit()"
               class="ng-untouched ng-pristine ng-invalid">
