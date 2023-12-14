@@ -30,7 +30,6 @@ export class ArticleComponent implements OnInit, OnDestroy{
     this.initialValue()
     this.initialListeners()
     this.fetchData()
-
   }
 
   ngOnDestroy() {
