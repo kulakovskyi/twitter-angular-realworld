@@ -1,6 +1,5 @@
-<!--<app-loading *ngIf="isLoading$| async"></app-loading>-->
-<!--<app-error-message *ngIf="error$| async"></app-error-message>-->
-
+<app-loading *ngIf="isLoading$| async"></app-loading>
+<app-error-message *ngIf="error$| async"></app-error-message>
 <div *ngIf="feed$| async">
   <div class="article-preview" *ngFor="let article of (feed$ | async)?.articles">
     <div class="article-meta">
@@ -25,9 +24,9 @@
 
     </a>
   </div>
-<!--  <app-pagination [total] = "(feed$ | async)?.articlesCount"-->
-<!--                  [limit]="limit"-->
-<!--                  [url]="baseUrl"-->
-<!--                  [currentPage]="currentPage"-->
-<!--  ></app-pagination>-->
+  <app-pagination [total] = "(feed$ | async)?.articlesCount"
+                  [limit]="limit"
+                  [url]="baseUrl"
+                  [currentPage]="currentPage"
+  ></app-pagination>
 </div>
