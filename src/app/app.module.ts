@@ -15,6 +15,7 @@ import {YourFeedModule} from "./your-feed/your-feed.module";
 import {TagFeedModule} from "./tag-feed/tag-feed.module";
 import {ArticleModule} from "./article/article.module";
 import {CreateArticleModule} from "./create-article/create-article.module";
+import {EditArticleModule} from "./edit-article/edit-article.module";
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import {CreateArticleModule} from "./create-article/create-article.module";
     YourFeedModule,
     TagFeedModule,
     ArticleModule,
-    CreateArticleModule
+    CreateArticleModule,
+    EditArticleModule
   ],
   providers: [
     PersistanceService,

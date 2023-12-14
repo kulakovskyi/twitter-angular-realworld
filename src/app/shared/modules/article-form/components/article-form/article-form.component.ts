@@ -10,7 +10,7 @@ import {FormControl, FormGroup} from "@angular/forms";
 })
 export class ArticleFormComponent implements OnInit{
   @Input() initialValues!: ArticleInputInterface
-  @Input() isSubmitting!: boolean
+  @Input() isSubmitting!: boolean | null
   @Input() errors!: BackendErrorsInterface | null
   @Output() articleSubmit = new EventEmitter<any>()
 
