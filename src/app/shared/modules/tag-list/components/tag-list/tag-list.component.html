@@ -1,1 +1,6 @@
-<p>tag-list works!</p>
+<ul class="tag-list" *ngIf="tags">
+  <li class="tag-default tag-pill tag-outline"
+      *ngFor="let tag of tags">
+    {{tag}}
+  </li>
+</ul>

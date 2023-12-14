@@ -10,6 +10,7 @@ import {RouterLink} from "@angular/router";
 import {LoadingModule} from "../loading/loading.module";
 import {ErrorMessageModule} from "../error-message/error-message.module";
 import {PaginationModule} from "../pagination/pagination.module";
+import {TagListModule} from "../tag-list/tag-list.module";
 
 @NgModule({
     imports: [
@@ -19,7 +20,8 @@ import {PaginationModule} from "../pagination/pagination.module";
         RouterLink,
         LoadingModule,
         ErrorMessageModule,
-        PaginationModule
+        PaginationModule,
+        TagListModule
     ],
   exports: [
     FeedComponent
