@@ -8,9 +8,41 @@ This is an Angular application developed following the [RealWorld API](https://g
 
 ## Features
 
-- **Authentication and Authorization**: Includes user authentication mechanisms and corresponding authorization features.
-- **CRUD Operations**: Ability to create, read, update, and delete data.
-- **RealWorld-Styled Interface**: User interface adhering to RealWorld standards and best practices.
+1. **Authentication and Authorization:**
+  - User authentication mechanisms.
+  - Authorization features for secure access.
+
+2. **CRUD Operations:**
+  - Create, Read, Update, and Delete operations for data management.
+
+3. **RealWorld-Styled Interface:**
+  - User interface designed in accordance with RealWorld standards and best practices.
+
+4. **User Interactions:**
+  - Subscribe to other users.
+  - Like and dislike other users.
+  - Like and unlike posts.
+
+5. **Routing:**
+  - Implement routing for seamless navigation.
+
+6. **Post Management:**
+  - Add and remove posts.
+  - Edit existing posts.
+
+7. **Profile Customization:**
+  - Configure and customize user profiles.
+
+8. **Subscription System:**
+  - Enable the functionality to subscribe to users.
+
+9. **Like System:**
+  - Allow users to like posts.
+
+10. **Advanced Post Features:**
+  - Implement additional post-related features.
+
+Each feature contributes to a richer and more interactive user experience in the application.
 
 ## Technologies
 
@@ -42,6 +74,8 @@ Explore the live version of the application [HERE](https://twitter-clone-angular
 Insert screenshots showcasing various aspects of your application here.
 ![Screenshot 1](./images/screenshot1.png)
 ![Screenshot 2](./images/screenshot2.png)
+![Screenshot 3](./images/screenshot3.png)
+![Screenshot 4](./images/screenshot4.png)
 
 ## Contribution
 
