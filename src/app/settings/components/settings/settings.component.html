@@ -1,0 +1,57 @@
+<div class="settings-page">
+  <div class="container page">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 col-xs-12"><h1 class="text-xs-center">Your Settings</h1>
+        <app-backend-error-message
+          *ngIf="backendErrors$ | async"
+          [backendError]="backendErrors$ | async"
+        ></app-backend-error-message>
+        <form
+          [formGroup]="form"
+          (ngSubmit)="onSubmit()"
+          class="ng-untouched ng-pristine ng-valid">
+          <fieldset>
+            <fieldset class="form-group">
+              <input type="text"
+                     placeholder="URL of profile picture"
+                     formControlName="image"
+                     class="form-control ng-untouched ng-pristine ng-valid"></fieldset>
+            <fieldset class="form-group">
+              <input type="text"
+                     placeholder="Username"
+                     formControlName="username"
+                     class="form-control form-control-lg ng-untouched ng-pristine ng-valid">
+            </fieldset>
+            <fieldset class="form-group">
+              <textarea rows="8"
+                        placeholder="Short bio about you"
+                        formControlName="bio"
+                        class="form-control form-control-lg ng-untouched ng-pristine ng-valid">              </textarea>
+            </fieldset>
+            <fieldset class="form-group"
+            ><input type="email"
+                    placeholder="Email"
+                    formControlName="email"
+                    class="form-control form-control-lg ng-untouched ng-pristine ng-valid">
+            </fieldset>
+            <fieldset class="form-group">
+              <input
+                type="password"
+                placeholder="password"
+                formControlName="password"
+                class="form-control form-control-lg ng-untouched ng-pristine ng-valid">
+            </fieldset>
+            <button
+              [disabled]="form.invalid || (isSubmitting$ | async)"
+              type="submit"
+              class="btn btn-lg btn-primary pull-xs-right"> Update Settings</button>
+          </fieldset>
+        </form>
+        <hr>
+        <button
+          (click)="logout()"
+          class="btn btn-outline-danger"> Or click here to logout.</button>
+      </div>
+    </div>
+  </div>
+</div>
