@@ -6,8 +6,6 @@ import {BackendErrorMessageModule} from "../shared/modules/backend-error-message
 import {ReactiveFormsModule} from "@angular/forms";
 import {StoreModule} from "@ngrx/store";
 import {reducers} from "./store/reducers";
-import {EffectsModule} from "@ngrx/effects";
-import {LogoutEffect} from "../auth/store/effects/logout.effect";
 
 const routes: Routes = [
   {path: 'settings', component: SettingsComponent}
@@ -18,7 +16,6 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     StoreModule.forFeature('settings', reducers),
-    //EffectsModule.forFeature([LogoutEffect]),
     BackendErrorMessageModule,
     ReactiveFormsModule
   ],
