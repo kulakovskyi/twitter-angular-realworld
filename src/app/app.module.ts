@@ -18,32 +18,34 @@ import {CreateArticleModule} from "./create-article/create-article.module";
 import {EditArticleModule} from "./edit-article/edit-article.module";
 import {SettingsModule} from "./settings/settings.module";
 import {UserProfileModule} from "./user-profile/user-profile.module";
+import {FooterModule} from "./shared/modules/footer/footer.module";
 
 
 @NgModule({
   declarations: [
     AppComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    AuthModule,
-    StoreModule.forRoot({}, {}),
-    EffectsModule.forRoot([]),
-    StoreDevtoolsModule.instrument({
-      maxAge: 25,
-      logOnly: true,
-    }),
-    TopBarModule,
-    GlobalFeedModule,
-    YourFeedModule,
-    TagFeedModule,
-    ArticleModule,
-    CreateArticleModule,
-    EditArticleModule,
-    SettingsModule,
-    UserProfileModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        AuthModule,
+        StoreModule.forRoot({}, {}),
+        EffectsModule.forRoot([]),
+        StoreDevtoolsModule.instrument({
+            maxAge: 25,
+            logOnly: true,
+        }),
+        TopBarModule,
+        GlobalFeedModule,
+        YourFeedModule,
+        TagFeedModule,
+        ArticleModule,
+        CreateArticleModule,
+        EditArticleModule,
+        SettingsModule,
+        UserProfileModule,
+        FooterModule
+    ],
   providers: [
     PersistanceService,
     {

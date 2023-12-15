@@ -14,6 +14,19 @@
             {{article.createdAt}}
           </span>
         </div>
+        <span *ngIf="!(isAuthor$ | async)">
+          <app-follow-button
+            style="margin: 0 10px 0 0"
+            [user]="article.author.username"
+            [isFollow]="article.favorited"
+            [slug]="article.author.username"
+          ></app-follow-button>
+          <app-add-to-favorite
+            [isFavorited]="article.favorited"
+            [articleSlug]="article.slug"
+            [favoritesCount]="article.favoritesCount"
+          ></app-add-to-favorite>
+        </span>
         <span *ngIf="isAuthor$ | async">
           <a class="btn btn-outline-secondary btn-sm" [routerLink]="['/articles', article.slug, 'edit']">
             <i class="ion-edit">

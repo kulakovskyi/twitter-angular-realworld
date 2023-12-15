@@ -11,6 +11,8 @@ import {DeleteArticleEffect} from "./store/effects/delete-article.effect";
 import {LoadingModule} from "../shared/modules/loading/loading.module";
 import {ErrorMessageModule} from "../shared/modules/error-message/error-message.module";
 import {TagListModule} from "../shared/modules/tag-list/tag-list.module";
+import {FollowButtonModule} from "../shared/modules/follow-button/follow-button.module";
+import {AddToFavoriteModule} from "../shared/modules/add-to-favorite/add-to-favorite.module";
 
 const routes: Routes = [
   {path: 'articles/:name', component: ArticleComponent}
@@ -24,7 +26,9 @@ const routes: Routes = [
     EffectsModule.forFeature([GetArticleEffect, DeleteArticleEffect]),
     LoadingModule,
     ErrorMessageModule,
-    TagListModule
+    TagListModule,
+    FollowButtonModule,
+    AddToFavoriteModule
   ],
   declarations: [
     ArticleComponent

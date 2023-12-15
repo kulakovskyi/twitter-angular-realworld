@@ -11,7 +11,7 @@ import {ActivatedRoute} from "@angular/router";
 export class FollowButtonComponent implements OnInit, OnDestroy{
   @Input() user!: string
   @Input() isFollow! : boolean
-  slug!: string
+  @Input() slug!: string
   fSub$!: Subscription
   unfSub$!: Subscription
 
@@ -20,12 +20,18 @@ export class FollowButtonComponent implements OnInit, OnDestroy{
   }
 
   ngOnInit() {
-    this.slug = this.route.snapshot.paramMap.get('slug') || '{}'
+    if(this.slug){
+      console.log(this.slug)
+    } else {
+      this.slug = this.route.snapshot.paramMap.get('slug') || '{}'
+    }
+
+
   }
 
   ngOnDestroy() {
-    this.fSub$.unsubscribe()
-    this.unfSub$.unsubscribe()
+    if(this.fSub$) this.fSub$.unsubscribe()
+    if(this.unfSub$) this.unfSub$.unsubscribe()
   }
 
   handleFollow() {
