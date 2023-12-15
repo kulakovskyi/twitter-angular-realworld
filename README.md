@@ -1,27 +1,46 @@
-# TwitterCloneAngular
+# Medium (Twitter) clone Angular 16
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
+A brief description of your application built on the RealWorld API.
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This is an Angular application developed following the [RealWorld API](https://github.com/gothinkster/realworld). RealWorld provides a unified API and specification for building social platforms using various technologies.
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Authentication and Authorization**: Includes user authentication mechanisms and corresponding authorization features.
+- **CRUD Operations**: Ability to create, read, update, and delete data.
+- **RealWorld-Styled Interface**: User interface adhering to RealWorld standards and best practices.
 
-## Build
+## Technologies
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Angular**: Version of your Angular framework.
+- **RxJS**: Use of reactive streams for managing data and events.
+- **NgRx Store**: State management library for Angular applications.
+- **NgRx Effects**: Middleware for handling side effects in your application.
+- **NgRx Selectors**: Efficiently querying and selecting slices of state.
+- **NgRx Reducers**: Functions that specify how the application's state changes in response to actions.
+- **Bootstrap (or other styling framework)**: For creating a stylish user interface.
 
-## Running unit tests
+## Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository:
+   git clone https://github.com/kulakovskyi/twitter-angular-realworld.git
 
-## Running end-to-end tests
+2. Install dependencies:
+   npm install
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Run the application:
+   ng serve
 
-## Further help
+## Demo
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Explore the live version of the application [HERE](https://twitter-clone-angular.web.app/).
+
+## Screenshots
+
+Insert screenshots showcasing various aspects of your application here.
+
+## Contribution
+
+Your contributions are welcome! If you have suggestions to enhance the project or if you've encountered a bug, feel free to create an issue or submit a pull request.
