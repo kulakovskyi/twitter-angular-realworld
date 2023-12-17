@@ -10,6 +10,8 @@ import {ArticleInterface} from "../../shared/types/article.interface";
 export class ArticleService {
   constructor(private http: HttpClient) {}
 
+
+
   getArticle(name: string): Observable<ArticleInterface>{
     const fullUrl = `${environment.apiUrl}/articles/${name}`
     return this.http.get<GetArticleResponseInterface>(fullUrl).pipe(
