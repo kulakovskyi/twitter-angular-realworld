@@ -71,7 +71,6 @@ Explore the live version of the application [HERE](https://twitter-clone-angular
 
 ## Screenshots
 
-Insert screenshots showcasing various aspects of your application here.
 ![gif 1](./images/gif.gif)
 ![Screenshot 1](./images/screenshot1.png)
 ![Screenshot 2](./images/screenshot2.png)
