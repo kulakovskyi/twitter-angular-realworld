@@ -79,3 +79,8 @@ Explore the live version of the application [HERE](https://twitter-clone-angular
 ## Contribution
 
 Your contributions are welcome! If you have suggestions to enhance the project or if you've encountered a bug, feel free to create an issue or submit a pull request.
+
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE.md](LICENSE.md). file for more information.

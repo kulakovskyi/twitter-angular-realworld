@@ -16,6 +16,7 @@ import {logoutAction} from "../../../auth/store/actions/sync.action";
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.scss']
 })
+
 export class SettingsComponent implements OnInit, OnDestroy{
   form!: FormGroup
   currentUser!: CurrentUserInterface
