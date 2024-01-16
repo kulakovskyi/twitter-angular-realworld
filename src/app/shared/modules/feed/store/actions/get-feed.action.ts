@@ -4,6 +4,7 @@ import {GetFeedResponseInterface} from "../../types/get-feed-response.interface"
 
 export const getFeedAction =
   createAction(ActionType.GET_FEED,
+
     props<{ url: string }>()
     )
 
